@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Subir Archivos
+    link(rel="stylesheet" href="/styles.css")
+    script(src="/script.js")
+  body
+    h1 Subir un Archivo
+    form(action="/upload" method="POST" enctype="multipart/form-data")
+      div
+        label(for="title") Título:
+        input(type="text" name="title" id="title" required)
+      div
+        label(for="description") Descripción:
+        textarea(name="description" id="description" required)
+      div
+        label(for="year") Año:
+        input(type="number" name="year" id="year" required)
+      div
+        label(for="file") Archivo:
+        input(type="file" name="file" id="file" accept="image/*" required)
+      button(type="submit") Subir
